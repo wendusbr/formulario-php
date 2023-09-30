@@ -1,5 +1,30 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(0, 119, 255);
+}
+
+
+header{
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+label{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    background-color: white;
+    box-shadow: 1px 1px 4px black;
+    border-radius: 1%;
+    padding: 50px;
 }
 
 .my-input{
@@ -8,4 +33,28 @@ body{
     background-color: transparent;
     border-radius: 5px;
     width: 100%;
+}
+
+.my-button{
+    border: none;
+    color: white;
+    background-color: green;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.my-button:hover{
+    background-color: rgb(0, 148, 0);
+}
+
+#searchButton{
+    border: none;
+    color: white;
+    background-color: rgb(0, 119, 255);
+    border-radius: 4px;
+    padding: 7px;
+}
+
+#searchButton:hover{
+    background-color: rgb(23, 131, 255);
 }
