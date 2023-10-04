@@ -13,28 +13,28 @@
         <h1>Formulário</h1>
     </header>
     <section class="mt-5 mb-5">
-        <div class="container">
-            <form method="post" action="../app/submit.php">
+        <div class="container p-4">
+            <form method="post" action="../app/server.php">
                 <div class="row">
                     <h3>Dados pessoais</h3>
                     <hr>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label for="cpf">CPF</label>
+                        <label>CPF</label>
                         <br>
-                        <input name="cpf" class="my-input" type="text" minlength="11" maxlength="11" required>
+                        <input id="cpf" name="cpf" class="my-input" type="text" placeholder="___.___.___-__" autocomplete="off" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12">
-                        <label for="nomeCompleto">Nome completo</label>
+                        <label>Nome completo</label>
                         <br>
                         <input name="nomeCompleto" class="my-input" type="text" required>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
-                        <label for="anoNasc">Ano de nascimento</label>
-                        <input name="anoNasc" class="my-input" type="text" maxlength="4" required>
+                        <label>Data de nascimento</label>
+                        <input id="dataNasc" name="dataNasc" class="my-input" type="date" required>
                     </div>
                 </div>
 
@@ -44,42 +44,38 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label for="cep">CEP</label>
+                        <label>CEP</label>
                         <br>
-                        <input name="cep" class="my-input" type="text" required>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <br>
-                        <button id="searchButton">Buscar</button>
+                        <input id="cep" name="cep" class="my-input" type="text" placeholder="_____-___" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-6 col-md-6 col-sm-10 col-xs-12">
-                        <label for="lagradouro">Lagradouro</label>
+                        <label>Lagradouro</label>
                         <br>
-                        <input name="lagradouro" class="my-input" type="text" required>
+                        <input id="lagradouro" name="lagradouro" class="my-input" type="text" required>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                        <label for="numero">Nº</label>
+                        <label>Nº</label>
                         <br>
-                        <input name="numero" class="my-input" type="text" required>
+                        <input id="numero" name="numero" class="my-input" type="text" required>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <label for="bairro">Bairro</label>
+                        <label>Bairro</label>
                         <br>
-                        <input name="bairro" class="my-input" type="text" required>
+                        <input id="bairro" name="bairro" class="my-input" type="text" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-6 col-md-6 col-sm-10 col-xs-12">
-                        <label for="cidade">Cidade</label>
+                        <label>Cidade</label>
                         <br>
-                        <input name="cidade" class="my-input" type="text" required>
+                        <input id="cidade" name="cidade" class="my-input" type="text" required>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                        <label for="estado">Estado</label>
+                        <label>Estado</label>
                         <br>
-                        <input name="estado" class="my-input" type="text" required>
+                        <input id="uf" name="estado" class="my-input" type="text" required>
                     </div>
                 </div>
 
@@ -89,14 +85,14 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <label for="telefone">Telefone</label>
+                        <label>Telefone</label>
                         <br>
-                        <input name="telefone" class="my-input" type="tel" placeholder="(88)988888888" required>
+                        <input id="telefone" name="telefone" class="my-input" type="tel" placeholder="(__)_____-____" required>
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
-                        <label for="email">E-mail</label>
+                        <label>E-mail</label>
                         <br>
-                        <input name="email" class="my-input" type="email" required>
+                        <input name="email" class="my-input" type="email" placeholder="example@gmail.com" required>
                     </div>
                 </div>
 
@@ -106,28 +102,28 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <label for="computador">Possui computador?</label>
+                        <label>Possui computador?</label>
                         <br>
                         <input type="radio" name="computador" value="sim" required>
-                        <label for="computador">Sim</label>
+                        <label>Sim</label>
                         <input type="radio" name="computador" value="nao" required>
-                        <label for="computador">Não</label>
+                        <label>Não</label>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <label for="celular">Possui celular?</label>
+                        <label>Possui celular?</label>
                         <br>
                         <input type="radio" name="celular" value="sim" required>
-                        <label for="celular">Sim</label>
+                        <label>Sim</label>
                         <input type="radio" name="celular" value="nao" required>
-                        <label for="celular">Não</label>
+                        <label>Não</label>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <label for="notebook">Possui notebook?</label>
+                        <label>Possui notebook?</label>
                         <br>
                         <input type="radio" name="notebook" value="sim" required>
-                        <label for="notebook">Sim</label>
+                        <label>Sim</label>
                         <input type="radio" name="notebook" value="nao" required>
-                        <label for="notebook">Não</label>
+                        <label>Não</label>
                     </div>
                 </div>
                 
@@ -137,11 +133,11 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label for="salario">Salário</label>
+                        <label>Salário</label>
                         <br>
                         <div style="display: flex">
                             <input class="my-input" style="width: 35px; background-color: rgb(245, 245, 245);" type="text" value="R$" disabled>
-                            <input name="salario" class="my-input" type="text" placeholder="0,00" required>
+                            <input name="salario" class="my-input" type="text" placeholder="0.00" required>
                         </div>
                     </div>
                 </div>
@@ -161,5 +157,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script src="assets/js/script.js"></script>
 </html>

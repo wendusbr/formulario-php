@@ -3,7 +3,6 @@ body{
     background-color: rgb(0, 119, 255);
 }
 
-
 header{
     text-align: center;
     color: white;
@@ -22,9 +21,7 @@ label{
 
 .container{
     background-color: white;
-    box-shadow: 1px 1px 4px black;
     border-radius: 1%;
-    padding: 50px;
 }
 
 .my-input{
@@ -45,16 +42,4 @@ label{
 
 .my-button:hover{
     background-color: rgb(0, 148, 0);
-}
-
-#searchButton{
-    border: none;
-    color: white;
-    background-color: rgb(0, 119, 255);
-    border-radius: 4px;
-    padding: 7px;
-}
-
-#searchButton:hover{
-    background-color: rgb(23, 131, 255);
 }
