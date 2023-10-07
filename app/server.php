@@ -1,4 +1,6 @@
 <?php
+    include('conexao.php');
+
     $cpf = $_POST['cpf'];
     $nomeCompleto = $_POST['nomeCompleto'];
     $dataNasc = $_POST['dataNasc'];
@@ -11,9 +13,37 @@
     $telefone = $_POST['telefone'];
     $email = $_POST['email'];
     $computador = $_POST['computador'];
+    switch($computador){
+        case 'sim':
+            $computador = true;
+        case 'nao':
+            $computador = false;
+    }
     $celular = $_POST['celular'];
+    switch($celular){
+        case 'sim':
+            $celular = true;
+        case 'nao':
+            $celular = false;
+    }
     $notebook = $_POST['notebook'];
+    switch($notebook){
+        case 'sim':
+            $notebook = true;
+        case 'nao':
+            $notebook = false;
+    }
     $salario = $_POST['salario'];
+
+    $sql = "INSERT INTO formulario(cpf, nome_completo, data_nasc, cep, lagradouro, numero, bairro, cidade, uf, telefone, email, computador, celular, notebook, salario) VALUES ('$cpf', '$nomeCompleto', '$dataNasc', '$cep', '$lagradouro', '$numero', '$bairro', '$cidade', '$estado', '$telefone', '$email', $computador, $celular. $notebook, $salario)";
+
+    /*if(mysqli_query($conexao, $sql)){
+        echo "Usuario cadastrado com sucesso";
+    }
+    else{
+        echo "Erro".mysqli_connect_error($conexao);
+    }*/
+    mysqli_close($conexao);
 
     date_default_timezone_set('America/Argentina/Buenos_Aires'); // Set fuso horário
     $dataHoje = date('d/m/Y H:i');
@@ -57,7 +87,7 @@
                     elseif ($salario < 1000):
                         print("Você tem direito a 1 notebook e 1 smartphone.</p>");
                 
-                    elseif ($computador=='nao' && $celular=='nao' && $notebook=='nao'):
+                    elseif (!$computador && !$celular && !$notebook):
                         print("Você tem direito a 1 notebook.</p>");
 
                     else :
