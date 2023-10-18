@@ -1,0 +1,19 @@
+CREATE DATABASE atividade04;
+
+CREATE TABLE formulario(
+	cpf char(20) PRIMARY KEY,
+	nome_completo varchar(50) NOT NULL,
+	data_nasc date NOT NULL,
+	cep char(20) NOT NULL,
+	lagradouro varchar(100) NOT NULL,
+	numero varchar(10) NOT NULL,
+	bairro varchar(20) NOT NULL,
+	cidade varchar(50) NOT NULL,
+	uf char(2) NOT NULL,
+	telefone char(20) NOT NULL,
+	email varchar(100) NOT NULL,
+	computador tinyint(1) NOT NULL,
+	celular tinyint(1) NOT NULL,
+	notebook tinyint(1) NOT NULL,
+	salario decimal(10,2) NOT NULL
+);
