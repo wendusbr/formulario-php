@@ -15,34 +15,34 @@
     $computador = $_POST['computador'];
     switch($computador){
         case 'sim':
-            $computador = true;
+            $computador = 1;
         case 'nao':
-            $computador = false;
+            $computador = 0;
     }
     $celular = $_POST['celular'];
     switch($celular){
         case 'sim':
-            $celular = true;
+            $celular = 1;
         case 'nao':
-            $celular = false;
+            $celular = 0;
     }
     $notebook = $_POST['notebook'];
     switch($notebook){
         case 'sim':
-            $notebook = true;
+            $notebook = 1;
         case 'nao':
-            $notebook = false;
+            $notebook = 0;
     }
     $salario = $_POST['salario'];
 
-    $sql = "INSERT INTO formulario(cpf, nome_completo, data_nasc, cep, lagradouro, numero, bairro, cidade, uf, telefone, email, computador, celular, notebook, salario) VALUES ('$cpf', '$nomeCompleto', '$dataNasc', '$cep', '$lagradouro', '$numero', '$bairro', '$cidade', '$estado', '$telefone', '$email', $computador, $celular. $notebook, $salario)";
+    $sql = "INSERT INTO formulario(cpf, nome_completo, data_nasc, cep, lagradouro, numero, bairro, cidade, uf, telefone, email, computador, celular, notebook, salario) VALUES ('$cpf', '$nomeCompleto', '$dataNasc', '$cep', '$lagradouro', '$numero', '$bairro', '$cidade', '$estado', '$telefone', '$email', $computador, $celular, $notebook, $salario)";
 
-    /*if(mysqli_query($conexao, $sql)){
+    if(mysqli_query($conexao, $sql)){
         echo "Usuario cadastrado com sucesso";
     }
     else{
         echo "Erro".mysqli_connect_error($conexao);
-    }*/
+    }
     mysqli_close($conexao);
 
     date_default_timezone_set('America/Argentina/Buenos_Aires'); // Set fuso horário
